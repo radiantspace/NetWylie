@@ -1,0 +1,17 @@
+﻿<Window x:Class="ConvertUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ConvertUI"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:MainVM x:Name="Context" />
+    </Window.DataContext>
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="23,30,0,0" TextWrapping="Wrap" Text="Wylie" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="88,28,0,0" TextWrapping="Wrap" Text="{Binding Wylie}" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,67,0,0" TextWrapping="Wrap" Text="Tibetan" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="61" Margin="88,67,0,0"  TextWrapping="Wrap" Text="{Binding Tibetan}" VerticalAlignment="Top" Width="365" FontFamily="Tibetan Machine Uni" FontSize="24"/>
+        <ListBox HorizontalAlignment="Left" Height="176" Margin="88,133,0,0" VerticalAlignment="Top" Width="419" ItemsSource="{Binding Warnings}"/>
+
+    </Grid>
+</Window>
